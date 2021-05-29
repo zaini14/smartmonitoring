@@ -1,0 +1,346 @@
+:root {
+	--orange-color: #FF944F;
+	--green-color: #BFE28E;
+	--blue-color: #AAE1F7;
+	--purple-color: #B5AEEF;
+	--darkPurple-color: #958ce8;
+	--font-gray: #666666;
+	--shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	--shadow-inset: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul li{
+	list-style: none;
+}
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+  	width: .5rem;
+}
+::-webkit-scrollbar-track {
+  	box-shadow: inset 0 0 5px grey;
+  	border-radius: 50rem;
+}
+::-webkit-scrollbar-thumb {
+  	background: #dfdfdf;
+  	border-radius: 50rem;
+}
+
+/*LOGIN*/
+
+.login {
+	display: flex;
+	height: 100vh;
+}
+.loginLeft {
+	position: relative;
+	width: 50%;
+	background-color: var(--purple-color);
+	border-radius : 0 1rem 1rem 0;
+	overflow: hidden;
+}
+.humanVector {
+	position: absolute;
+	width: 35rem;
+	bottom: 2.5rem;
+	right: 0;
+	left: 3rem;
+}
+.cloudVector {
+	position: absolute;
+	width: 12rem;
+	top: .5rem;
+}
+.cloudVector:nth-child(2) {
+	position: absolute;
+	top: 3rem;
+	left: 8rem;
+}
+.cloudVector:nth-child(3) {
+	position: absolute;
+	top: 5rem;
+	left: 0;
+}
+.clockVector {
+	position: absolute;
+	width: 9rem;
+	top: 8rem;
+	left: 6rem;
+}
+.messageVector {
+	position: absolute;
+	width: 4rem;
+	bottom: 14rem;
+	left: 8rem;
+}
+.cardsVector {
+	position: absolute;
+	width: 8rem;
+	right: 4rem;
+	top: 15rem;
+}
+.calendarVector {
+	position: absolute;
+	width: 7rem;
+	right: 3rem;
+	bottom: 4rem;
+}
+.loginRight {
+	display: flex;
+	width: 50%;
+	justify-content: center;
+	align-items: center;
+}
+.loginBox {
+	background: #FCFCFC;
+	box-shadow: var(--shadow-inset);
+	padding: 1rem 3rem;
+	border-radius: 1rem;
+}
+.loginTitle {
+	text-align: center;
+	font-size: 2rem;
+	font-family: arial, 'helvetica';
+	font-weight: 550;
+	color: #778877;
+	margin: .8rem 0;
+	margin-bottom: 1.3rem;
+}
+.loginUser input,
+.loginPass input{
+	display: block;
+	width: 15rem;
+	height: 2.5rem;
+	padding: 0 .8rem;
+	border: none;
+	border-radius: 5rem;
+	margin: .8rem 0;
+	background: #F2F2F2;
+	box-shadow: var(--shadow);
+	font-weight: 520;
+	color: var(--font-gray);
+}
+.loginUser input:focus,
+.loginPass input:focus {
+	outline: none;
+	border: none;
+}
+.loginBtn {
+	display: flex;
+	justify-content: center;
+	margin-top: 1.3rem
+}
+.loginBtn button {
+	border: none;
+	border-radius: 50rem;
+	padding: .8rem 2rem;
+	margin-bottom: 1.2rem;
+	font-weight: 550;
+	color: #666666;
+	background: #F2F2F2;
+	box-shadow: var(--shadow);
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+}
+.loginBtn button:active {
+	box-shadow: none;
+}
+
+/*NAVBAR*/
+.header {
+	height: 4rem !important;
+}
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: inherit;
+}
+.navbar .logo {
+	display: flex;
+}
+.logoHamburger {
+	margin-right: 1rem;
+	cursor: pointer;
+}
+.navbarSearch {
+	background-color: #f8f9f9;
+	border-radius: 50rem;
+	padding: .2rem;
+	box-shadow: var(--shadow-inset);
+	overflow: hidden;
+}
+.navbarSearch input {
+	display: inline-block;
+	height: 2rem;
+	width: 13rem;
+	padding: 0 .5rem;
+	background-color: transparent;
+	color: var(--font-gray);
+	border: none;
+}
+.navbarSearch input:focus {
+	border: none;
+	outline: none;
+}
+.navbarSearch i {
+	margin: .5rem;
+	cursor: pointer;
+}
+.navbarLog i{
+	font-size: 1.5rem;
+	margin: 0 .7rem;
+	cursor: pointer;
+	color: var(--font-gray);
+}
+
+/*SIDEBAR*/
+.aside {
+	width: 16rem !important;
+	height: 100vh;
+	transition: all .5s ease-in-out;
+}
+.aside.active {
+	width: 5rem !important;
+}
+.aside.active .sidebar ul li.sidebarItem {
+	text-align: center;
+	align-items: center;
+	border-radius: .8rem;
+	margin: 0 .5rem;
+	width: 3.5rem;
+	height: 3.5rem;
+}
+.aside.active .sidebar ul li span{
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+.sidebar {
+	position: fixed;
+	top: 0;
+	background-color: var(--purple-color);
+	border-radius: 0 1rem 1rem 0;
+	height: inherit;
+	width: inherit;
+	overflow: auto;
+	overflow-x: hidden;
+
+}
+.myAvatar {
+	display: block;
+	text-align: center;
+}
+img.avatar{
+	position: relative;
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: top;
+	margin-top: 3rem;
+	margin-bottom: .4rem;
+	transition: all .3s ease;
+}
+.aside.active .sidebar img.avatar {
+	width: 4.5rem;
+	height: 5rem;
+	border-radius: .5rem;
+	margin-top: 0;
+}
+.avatarName {
+	font-size: 1.2rem;
+	font-family: arial, 'helvetica';
+	font-weight: 500;
+	color: #f9f6f7;
+}
+.avatarRole {
+	font-size: .9rem;
+	font-family: arial, 'Helvetica';
+	color: #dfdfdf;
+}
+ul.sidebarMenu {
+	margin: 2.5rem 0;
+}
+li.sidebarItemTitle {
+	margin: .5rem 1.1rem;
+	font-family: arial, 'Helvetica';
+	color: #777777;
+	font-weight: 500;
+}
+li.sidebarItem {
+	position: relative;
+	display: flex;
+	align-items: center;
+	text-align: left;
+	border-radius: .8rem;
+	margin: 0 1rem;
+	padding: 1rem 1.2rem;
+	font-family: arial, 'Helvetica';
+	font-size: .9rem;
+	background-color: transparent;
+	color: #f9f6f7;
+	cursor: pointer;
+	transition: all 1s ease;
+}
+li.sidebarItem span {
+	transition: all .3s ease-in-out;
+}
+li.sidebarItem:hover {
+	background-color: var(--darkPurple-color);
+}
+li.sidebarItem i {
+	margin-right: .5em;
+	font-size: 1.2rem;
+}
+
+/*MAP*/
+.drawArea {
+	margin: 0 2rem;
+}
+.drawArea .title {
+	margin-bottom: 1.2rem;
+}
+.drawArea p, p.titleCountry {
+	font-family: arial, 'Helvetica';
+	margin: .2rem 0;
+}
+.drawArea p.titleCountry {
+	color: var(--font-gray);
+	font-size: 1.8rem;
+}
+.drawArea p {
+	color: #777777;
+}
+.drawMap {
+	height: 28rem;
+	border-radius: .5rem;
+	overflow: hidden;
+}
+.drawMap:focus {
+	border: none;
+}
+.breadcrumbs{
+	margin: 1rem 0;
+	margin-bottom: 3rem;
+}
+.breadcrumbsItem {
+	margin-right: .5rem;
+	padding: .6rem;
+	background-color: #ffff;
+	border-radius: 20rem;
+	box-shadow: var(--shadow);
+	font-size: 1rem;
+	font-family: arial, 'Helvetica';
+}
+.breadcrumbsItem a {
+	cursor: pointer !important;
+	color: var(--font-gray) !important;
+}
+.breadcrumbsItem i {
+	margin-right: .3rem;
+}
