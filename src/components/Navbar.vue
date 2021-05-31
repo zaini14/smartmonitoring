@@ -6,7 +6,7 @@
 			<div
 			class="logoHamburger"
 			@click="navCollapse">
-				<svg viewBox="0 0 100 80" width="35" height="40" fill="#666666">
+				<svg viewBox="0 0 100 80" width="35" height="40" fill="#a7bbc7">
 				  <rect width="100" height="20" rx="10"></rect>
 				  <rect y="30" width="80" height="20" rx="10"></rect>
 				  <rect y="60" width="100" height="20" rx="10"></rect>

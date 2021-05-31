@@ -14,20 +14,28 @@
 		</div>
 		<ul
 		class="sidebarMenu">
-			<li
-			class="sidebarItem">
-				<i class="el-icon-house"></i>
-		    	<span>Dashboard</span>
-			</li>
+			<router-link
+			class="routerLink"
+			to="/dashboard">
+				<li
+				class="sidebarItem">
+					<i class="el-icon-house"></i>
+			    	<span>Dashboard</span>
+				</li>
+			</router-link>
 			<li
 			class="sidebarItemTitle">
 		    	<span>Monitoring</span>
 			</li>
-			<li
-			class="sidebarItem">
-				<i class="el-icon-view"></i>
-		    	<span slot="title">Event Monitoring</span>
-			</li>
+			<router-link
+			class="routerLink"
+			to="/monitoring/event">
+				<li
+				class="sidebarItem">
+					<i class="el-icon-view"></i>
+			    	<span slot="title">Event Monitoring</span>
+				</li>
+			</router-link>
 			<li
 			class="sidebarItem">
 				<i class="el-icon-odometer"></i>

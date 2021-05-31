@@ -14,7 +14,9 @@
 		  </el-header>
 		      <el-main>
             <Breadcrumb :breadcrumbs="crumbs"/>
-		      	<Map />
+		      	<transition name="fade">
+              <router-view />
+            </transition>
 		      </el-main>
 		    </el-container>
 		  </el-container>
@@ -73,5 +75,11 @@ export default {
 <style lang="css" scoped>
 .el-main {
     background-color: #E9EEF3;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

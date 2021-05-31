@@ -4,7 +4,7 @@
 	--blue-color: #AAE1F7;
 	--purple-color: #B5AEEF;
 	--darkPurple-color: #958ce8;
-	--font-gray: #666666;
+	--font-gray: #45526c;
 	--shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	--shadow-inset: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -16,6 +16,9 @@
 }
 ul li{
 	list-style: none;
+}
+.routerLink {
+	text-decoration: none;
 }
 /*SCROLLBAR*/
 ::-webkit-scrollbar {
@@ -269,7 +272,7 @@ ul.sidebarMenu {
 li.sidebarItemTitle {
 	margin: .5rem 1.1rem;
 	font-family: arial, 'Helvetica';
-	color: #777777;
+	color: var(--font-gray);
 	font-weight: 500;
 }
 li.sidebarItem {
@@ -297,6 +300,7 @@ li.sidebarItem i {
 	margin-right: .5em;
 	font-size: 1.2rem;
 }
+
 
 /*MAP*/
 .drawArea {

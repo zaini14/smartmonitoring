@@ -10,8 +10,7 @@
 			<el-breadcrumb-item 
 			v-for="(item, i) in breadcrumbs"
 			class="breadcrumbsItem">
-		 		<a 
-		 		:href="item.to">{{item.text}}</a>
+		 		<span>{{item.text}}</span>
 			</el-breadcrumb-item>
 		</el-breadcrumb>
 	</div>
